@@ -3,12 +3,12 @@ import {
   renderAuthorInfo,
   renderNewUserForm,
   renderNewUser,
-} from './render-functions.js';
+} from './render-functions.js'; // pulling the functions into the file
 import {
   getFirstThreeFantasyBooks,
   getAuthor,
   createNewUser,
-} from './fetch-functions.js';
+} from './fetch-functions.js'; // pulling the functions into this file
 
 export default async function app(appDiv) {
   const bookListEl = document.createElement('ul');
@@ -28,12 +28,13 @@ export default async function app(appDiv) {
   appDiv.append(newUserFormEl);
   // Render the form!
   // renderNewUserForm;
-
+  
   // Fetch the books!
-  // const books =
+  const books = await getFirstThreeFantasyBooks(); // 
+  console.log(books)
   // render out the books
   // renderBookList
-
+renderBookList(bookListEl, books)
   // bookListEl.addEventListener('???', () => {})
 
   // newUserFormEl.addEventListener('???', () => {})
