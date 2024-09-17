@@ -17,6 +17,9 @@ the code below should be inside the forEach loop and you should append the eleme
 // append
 li.append(img, p, button)
 bookListEl.append(li)
+    })
+
+
 }
 
 export const renderAuthorInfo = (authorInfoEl, author) => {
